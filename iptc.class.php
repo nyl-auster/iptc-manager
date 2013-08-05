@@ -1,7 +1,12 @@
-<?
+<?php
 /**
  * @see http://php.net/manual/fr/function.iptcembed.php
- *
+ * Example of use :
+ * @code
+ * $iptc = new iptc('images/example.jpg');
+ * $iptc->set('city', 'Meymac');
+ * $iptc->write();
+ * @endcode
  */
 
 /************************************************************\
