@@ -1,12 +1,22 @@
 <?php
 /**
  * @see http://php.net/manual/fr/function.iptcembed.php
- * Example of use :
+ *
+ * Examples of use :
+ *
  * @code
  * $iptc = new iptc('images/example.jpg');
  * $iptc->set('city', 'Meymac');
  * $iptc->write();
  * @endcode
+ *
+ * @code
+ * $datas = json_encode(array('x' => '400', 'y' => '200'));
+ * $iptc = new iptc('images/example.jpg');
+ * print $iptc->set('DocumentNotes');
+ * $iptc->write();
+ * @endcode
+ *
  */
 
 /************************************************************\
@@ -19,7 +29,7 @@
 
 \************************************************************/
 
-class iptc {
+class iptcApi {
 
   protected $meta = array();
   protected $hasmeta = false;
