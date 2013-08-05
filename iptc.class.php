@@ -76,6 +76,7 @@ class iptc {
   }
 
   public function get($tag) {
+    $tag = $this->iptcTags[$tag];
     return isset($this->meta["2#$tag"]) ? $this->meta["2#$tag"][0] : false;
   }
 
